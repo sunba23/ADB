@@ -1,0 +1,20 @@
+Country
+- missing: abbrev, flag, is_eu, tz_offset
+
+League
+- missing: photo
+
+Player:
+- to be moved: stuff from attributes. csv has "id,player_api_id,player_name,player_fifa_api_id,birthday,height,weight"
+
+MatchPlayer:
+take player ids and match ids from Matches to create MatchPlayer.
+
+Match:
+home team id = home team api id field from team table. add weather id from weather table! add odds!!!
+
+Team:
+add logo. Add buildup* from team attributes table.
+
+Weather:
+add weather xd

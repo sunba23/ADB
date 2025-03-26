@@ -1,0 +1,21 @@
+services:
+  oracle-db:
+    image: gvenzl/oracle-xe:latest
+    container_name: oracle-db
+    environment:
+      - ORACLE_PASSWORD=dupa
+    ports:
+      - "1521:1521"
+      - "5500:5500"
+    volumes:
+      - oracle_data:/opt/oracle/oradata
+
+  dbgate:
+    image: dbgate/dbgate
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./dbgate-connections.json:/root/.dbgate/connections.json
+
+volumes:
+  oracle_data:
