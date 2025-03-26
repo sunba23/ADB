@@ -14,8 +14,6 @@ services:
     image: dbgate/dbgate
     ports:
       - "3000:3000"
-    volumes:
-      - ./dbgate-connections.json:/root/.dbgate/connections.json
 
 volumes:
   oracle_data:
