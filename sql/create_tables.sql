@@ -1,4 +1,3 @@
--- Create Player table
 CREATE TABLE Player (
     id NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     name VARCHAR2(100),
@@ -13,7 +12,6 @@ CREATE TABLE Player (
     crossing NUMBER
 );
 
--- Create Team table
 CREATE TABLE Team (
     id NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     name VARCHAR2(100),
@@ -25,7 +23,6 @@ CREATE TABLE Team (
     creation_date TIMESTAMP
 );
 
--- Create Country table
 CREATE TABLE Country (
     id NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     name VARCHAR2(100),
@@ -35,7 +32,6 @@ CREATE TABLE Country (
     tz_offset NUMBER
 );
 
--- Create League table
 CREATE TABLE League (
     id NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     country_id NUMBER NOT NULL REFERENCES Country(id),
@@ -43,7 +39,6 @@ CREATE TABLE League (
     photo VARCHAR2(255)
 );
 
--- Create Weather table
 CREATE TABLE Weather (
     id NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     temperature DECIMAL(5,2),
@@ -52,7 +47,6 @@ CREATE TABLE Weather (
     conditions VARCHAR2(100)
 );
 
--- Create Match table
 CREATE TABLE Matches (
     id NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     home_team_id NUMBER NOT NULL REFERENCES Team(id),
@@ -68,7 +62,6 @@ CREATE TABLE Matches (
     match_date TIMESTAMP
 );
 
--- Create MatchPlayer table
 CREATE TABLE MatchPlayer (
     id NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     player_id NUMBER NOT NULL REFERENCES Player(id),

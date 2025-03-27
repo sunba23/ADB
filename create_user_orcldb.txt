@@ -1,8 +1,0 @@
-ALTER SESSION SET CONTAINER = XEPDB1;
-CREATE USER krzysztof IDENTIFIED BY "Testpass1!";
-GRANT CONNECT, RESOURCE TO krzysztof;
-ALTER USER krzysztof QUOTA UNLIMITED ON USERS;
-CONNECT krzysztof/"Testpass1!"@XEPDB1;
-GRANT DBA to krzysztof;
-
-sqlplus krzysztof@XEPDB1

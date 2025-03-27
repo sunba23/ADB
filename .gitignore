@@ -1,1 +1,2 @@
-dbgate-connections.json
+*env*
+data/csv/*.csv
