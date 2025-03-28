@@ -27,10 +27,10 @@ enrichers = [
         out_name=str(CSVDIR / "Player_enriched.csv"),
     ),
     MatchEnricher(
-        in_file="../csv/Match.csv", 
-        in_player_file="../csv/Player.csv", 
-        out_file="../csv/Match_enriched.csv", 
-        out_match_player_file="../csv/MatchPlayer_enriched.csv",
+        in_file=(CSVDIR / "Match.csv"), 
+        in_player_file=(CSVDIR / "Player.csv"), 
+        out_file= (CSVDIR / "Match_enriched.csv"), 
+        out_match_player_file= (CSVDIR / "MatchPlayer_enriched.csv"),
     )
 ]
 
