@@ -4,6 +4,7 @@ from table_conversions.country import CountryEnricher
 from table_conversions.league import LeagueEnricher
 from table_conversions.player import PlayerEnricher
 from table_conversions.teams import TeamsEnricher
+from table_conversions.matches import MatchEnricher
 
 CSVDIR = (pathlib.Path(__file__).parent / "../csv").resolve()
 
@@ -25,6 +26,12 @@ enrichers = [
         in_attributes_name=str(CSVDIR / "Player_Attributes.csv"),
         out_name=str(CSVDIR / "Player_enriched.csv"),
     ),
+    MatchEnricher(
+        in_file=(CSVDIR / "Match.csv"), 
+        in_player_file=(CSVDIR / "Player.csv"), 
+        out_file= (CSVDIR / "Match_enriched.csv"), 
+        out_match_player_file= (CSVDIR / "MatchPlayer_enriched.csv"),
+    )
 ]
 
 
