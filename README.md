@@ -38,5 +38,16 @@ Just copy and paste contents of [create_tables.sql](sql/create_tables.sql) into 
 Use the below config to connect:
 ![DbGate config](misc/dbgate.png)
 
-## Importing CSV's
-Download a database.sqlite file from https://www.kaggle.com/datasets/hugomathien/soccer?resource=download and paste it into the data/csv_scripts folder. Run the sqlite_to_csv.py script. All CSV's should be in data/csv folder. Save all new CSV's in data/csvNew folder.
+## Importing data to database
+As a base, [this database from kaggle](https://www.kaggle.com/datasets/hugomathien/soccer?resource=download) is used.
+Save it in the `data/db/` folder as `database.sqlite`. \
+Set up local python environment with [uv](https://docs.astral.sh/uv/). 
+
+Convert the database into csv files with:
+```sh
+python sqlite_conversions/sqlite_to_csv.py
+```
+then run enrichers with:
+```sh
+python main.py
+```
