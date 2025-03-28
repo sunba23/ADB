@@ -6,6 +6,8 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "geopy>=2.4.1",
+    "pandas>=2.2.3",
+    "geopy>=2.4.1",
     "pycountry>=24.6.1",
     "pytz>=2025.2",
     "requests>=2.32.3",
