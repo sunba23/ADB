@@ -100,13 +100,3 @@ class MatchEnricher:
         print(f"Processing complete. Output files:")
         print(f"- Match data: {self.out_file}")
         print(f"- Player assignments: {self.out_match_player_file}")
-
-
-if __name__ == "__main__":
-    processor = MatchEnricher(
-        in_file="../csv/Match.csv",
-        in_player_file="../csv/Player.csv",
-        out_file="../csv/Match_enriched.csv",
-        out_match_player_file="../csv/MatchPlayer_enriched.csv"
-    )
-    processor.run()
