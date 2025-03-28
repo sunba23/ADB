@@ -1,4 +1,4 @@
 *env*
 data/csv/*.csv
 *__pycache__*
-data/csnNew/*.csv*__pycache__*
+data/csnNew/*.csv*
