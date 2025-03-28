@@ -1,5 +1,4 @@
 *env*
 data/csv/*.csv
+data/db/*.sqlite
 *__pycache__*
-data/csnNew/*.csv
-data/csv_scripts/*.sqlite
