@@ -1,6 +1,7 @@
 from table_conversions.country import CountryEnricher
 from table_conversions.league import LeagueEnricher
 from table_conversions.teams import TeamsEnricher
+from table_conversions.matches import MatchEnricher
 
 enrichers = [
     CountryEnricher(
@@ -12,6 +13,12 @@ enrichers = [
         in_team_attributes_file="../csv/Team_Attributes.csv",
         out_file="../csv/Team_enriched.csv",
     ),
+    MatchEnricher(
+        in_file="../csv/Match.csv", 
+        in_player_file="../csv/Player.csv", 
+        out_file="../csv/Match_enriched.csv", 
+        out_match_player_file="../csv/MatchPlayer_enriched.csv",
+    )
 ]
 
 
