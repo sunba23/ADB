@@ -37,3 +37,6 @@ Just copy and paste contents of [create_tables.sql](sql/create_tables.sql) into 
 ## DbGate
 Use the below config to connect:
 ![DbGate config](misc/dbgate.png)
+
+## Importing CSV's
+Download a database.sqlite file from https://www.kaggle.com/datasets/hugomathien/soccer?resource=download and paste it into the data/csv_scripts folder. Run the sqlite_to_csv.py script. All CSV's should be in data/csv folder. Save all new CSV's in data/csvNew folder.
