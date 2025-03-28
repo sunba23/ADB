@@ -1,16 +1,29 @@
+import pathlib
+
 from table_conversions.country import CountryEnricher
 from table_conversions.league import LeagueEnricher
+from table_conversions.player import PlayerEnricher
 from table_conversions.teams import TeamsEnricher
+
+CSVDIR = (pathlib.Path(__file__).parent / "../csv").resolve()
 
 enrichers = [
     CountryEnricher(
-        in_name="../csv/Country.csv", out_name="../csv/Country_enriched.csv"
+        in_name=str(CSVDIR / "Country.csv"),
+        out_name=str(CSVDIR / "Country_enriched.csv"),
     ),
-    LeagueEnricher(in_file="../csv/League.csv", out_file="../csv/League_enriched.csv"),
+    LeagueEnricher(
+        in_file=str(CSVDIR / "League.csv"), out_file=str(CSVDIR / "League_enriched.csv")
+    ),
     TeamsEnricher(
-        in_teams_file="../csv/Team.csv",
-        in_team_attributes_file="../csv/Team_Attributes.csv",
-        out_file="../csv/Team_enriched.csv",
+        in_teams_file=str(CSVDIR / "Team.csv"),
+        in_team_attributes_file=str(CSVDIR / "Team_Attributes.csv"),
+        out_file=str(CSVDIR / "Team_enriched.csv"),
+    ),
+    PlayerEnricher(
+        in_name=str(CSVDIR / "Player.csv"),
+        in_attributes_name=str(CSVDIR / "Player_Attributes.csv"),
+        out_name=str(CSVDIR / "Player_enriched.csv"),
     ),
 ]
 
